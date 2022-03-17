@@ -161,11 +161,11 @@ EOSQL
 ```
 cd project/docker
 # 前台启动项目
-docker-compose -f docker-compose.yml up
+docker-compose -f docker-compose-windows.yml up
 # 后台启动项目
-docker-compose -f docker-compose.yml up -d
+docker-compose -f docker-compose-windows.yml up -d
 # 停止服务
-docker-compose -f docker-compose.yml down
+docker-compose -f docker-compose-windows.yml down
 ```
 
 ### 特别说明
