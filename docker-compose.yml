@@ -1,10 +1,7 @@
 version: "3.0"
 services:
   backend:
-#    restart: always
-    build:
-      context: ../ThingsPanel-Go
-      dockerfile: Dockerfile_backend
+    image: youngting/thingspanel-go
     ports:
       - "9999:9999"
     networks:
@@ -16,9 +13,7 @@ services:
 
 
   frontend:
-    build:
-      context: ../ThingsPanel-Backend-Vue
-      dockerfile: Dockerfile_frontend
+    image: youngting/thingspanel-backend-vue:1.0
     ports:
       - "8080:8080"
     expose:
@@ -57,9 +52,10 @@ services:
         ipv4_address: 172.19.0.4
 
   gmqtt:
-    build:
-      context: ../Gmqtt
-      dockerfile: Dockerfile_gmqtt
+    image: youngting/gmqtt:latest
+#    build:
+#      context: ../Gmqtt
+#      dockerfile: Dockerfile_gmqtt
     ports:
       - "10000:10000"
 
