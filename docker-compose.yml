@@ -1,0 +1,78 @@
+version: "3.0"
+services:
+  backend:
+#    restart: always
+    build:
+      context: ../ThingsPanel-Go
+      dockerfile: Dockerfile_backend
+    ports:
+      - "9999:9999"
+    networks:
+      extnetwork:
+        ipv4_address: 172.19.0.2
+    links:
+      - database
+      - gmqtt
+
+
+  frontend:
+    build:
+      context: ../ThingsPanel-Backend-Vue
+      dockerfile: Dockerfile_frontend
+    ports:
+      - "8080:8080"
+    expose:
+      - 8080
+    depends_on:
+      - backend
+    hostname: frontend
+    networks:
+      extnetwork:
+        ipv4_address: 172.19.0.3
+    links:
+      - backend
+
+
+  database:
+    image: timescale/timescaledb:latest-pg14
+    user: postgres
+    volumes:
+#      - ./init_files/init-user-db.sh:/docker-entrypoint-initdb.d/init-user-db.sh
+      - ./init_files/TP.sql:/docker-entrypoint-initdb.d/TP.sql
+
+    ports:
+      - "5432:5432"
+    expose:
+      - "5432"
+    environment:
+      - "TZ=Asia/Shanghai"
+      - "LC_ALL=C.UTF-8"
+      - "POSTGRES_DB=ThingsPanel"
+      - "POSTGRES_USER=postgres"
+      - "POSTGRES_PASSWORD=postgres"
+      - "POSTGRES_HOST_AUTH_METHOD=trust"
+    hostname: postgres
+    networks:
+      extnetwork:
+        ipv4_address: 172.19.0.4
+
+  gmqtt:
+    build:
+      context: ../Gmqtt
+      dockerfile: Dockerfile_gmqtt
+    ports:
+      - "10000:10000"
+
+    hostname: gmqtt
+    networks:
+      extnetwork:
+        ipv4_address: 172.19.0.5
+
+networks:
+  extnetwork:
+    ipam:
+      config:
+        - subnet: 172.19.0.0/16
+          gateway: 172.19.0.1
+
+
