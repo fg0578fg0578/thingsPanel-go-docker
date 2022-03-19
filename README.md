@@ -13,7 +13,7 @@
 ```
 
 # 拉取docker配置
-git clone git@github.com:ThingsPanel/thingsPanel-go-docker.git
+git clone https://github.com/ThingsPanel/thingsPanel-go-docker.git
 cd thingsPanel-go-docker
 ```
 
