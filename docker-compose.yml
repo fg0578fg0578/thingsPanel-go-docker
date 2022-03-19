@@ -32,7 +32,7 @@ services:
     image: timescale/timescaledb:latest-pg14
     user: postgres
     volumes:
-#      - ./init_files/init-user-db.sh:/docker-entrypoint-initdb.d/init-user-db.sh
+      #      - ./init_files/init-user-db.sh:/docker-entrypoint-initdb.d/init-user-db.sh
       - ./init_files/TP.sql:/docker-entrypoint-initdb.d/TP.sql
 
     ports:
@@ -53,9 +53,9 @@ services:
 
   gmqtt:
     image: youngting/gmqtt:latest
-#    build:
-#      context: ../Gmqtt
-#      dockerfile: Dockerfile_gmqtt
+    #    build:
+    #      context: ../Gmqtt
+    #      dockerfile: Dockerfile_gmqtt
     ports:
       - "10000:10000"
 
@@ -70,5 +70,4 @@ networks:
       config:
         - subnet: 172.19.0.0/16
 #          gateway: 172.19.0.1
-
 
