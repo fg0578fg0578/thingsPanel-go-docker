@@ -1,9 +1,10 @@
 # 本地快速启动项目
 
-## windows环境
-**第一步 windows电脑安装 [Docker Desktop](https://www.docker.com/products/docker-desktop) 和 [git](https://git-scm.com/)**
-
-傻瓜式安装这里不做赘述
+## windows环境准备
+- **windows电脑安装 [Docker Desktop](https://www.docker.com/products/docker-desktop)**
+## linux环境准备
+- **安装docker**
+- **安装docker-compose**
 
 **第二步 拉取项目**
 
