@@ -2,9 +2,11 @@
 
 ## windows环境准备
 - **windows电脑安装 [Docker Desktop](https://www.docker.com/products/docker-desktop)**
+- **git**
 ## linux环境准备
 - **安装docker**
 - **安装docker-compose**
+- **git**
 
 **第二步 拉取项目**
 
