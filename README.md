@@ -31,3 +31,13 @@ docker-compose -f docker-compose.yml up -d
 # 停止服务
 docker-compose -f docker-compose.yml down
 ```
+
+
+## 插件加载
+
+** 插件存放目录 **
+
+> `./init_files/extensions`
+> `./init_files/files`
+
+** 防止好插件之后,重新启动项目即可 **

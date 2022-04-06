@@ -1,0 +1,47 @@
+pm25:
+  type: 'app'
+  name: 'pm25'
+  device: 'PM2.5传感器'
+  description: 'PM2.5插件 PM2.5 plug-in'
+  version: '1.0.0'
+  author: ''
+  email: ''
+  widgets:
+    pm25_main:
+      name: 'PM2.5值'
+      description: 'PM信息'
+      receiver: 'Pm25'
+      thumbnail: '/pm25.png'
+      template: 'pm25_main'
+      fields:
+        time:
+          name: '时间'
+          type: 3
+          symbol: ''
+        pm25:
+          name: 'PM2.5'
+          type: 3
+          symbol: 'ug/m3'
+        pm10:
+          name: 'PM10'
+          type: 3
+          symbol: 'ug/m3'
+        pm100:
+          name: 'PM100'
+          type: 3
+          symbol: 'ug/m3'
+    pm10_main:
+      name: 'PM10值'
+      description: 'PM10值'
+    pm100_main:
+      name: 'PM100值'
+      description: 'PM100值'
+    pm25_curve:
+      name: 'PM2.5曲线'
+      description: 'PM2.5曲线'
+    pm10_curve:
+      name: 'PM10曲线'
+      description: 'PM10曲线'
+    pm100_curve:
+      name: 'PM100曲线'
+      description: 'PM100曲线'

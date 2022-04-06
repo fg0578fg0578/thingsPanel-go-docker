@@ -11,6 +11,10 @@ services:
       - database
       - gmqtt
 
+    volumes:
+      - ./init_files/extensions:/go/src/extensions
+      - ./init_files/files:/go/src/files
+    # /go/src/extensions
 
   frontend:
     image: youngting/thingspanel-backend-vue:1.0
@@ -32,7 +36,6 @@ services:
     image: timescale/timescaledb:latest-pg14
     user: postgres
     volumes:
-      #      - ./init_files/init-user-db.sh:/docker-entrypoint-initdb.d/init-user-db.sh
       - ./init_files/TP.sql:/docker-entrypoint-initdb.d/TP.sql
 
     ports:
@@ -70,4 +73,6 @@ networks:
       config:
         - subnet: 172.19.0.0/16
 #          gateway: 172.19.0.1
+
+
 
