@@ -1,7 +1,7 @@
 version: "3.0"
 services:
   backend:
-    image: youngting/thingspanel-go
+    image: youngting/thingspanel-go:latest
     ports:
       - "9999:9999"
     networks:
@@ -17,7 +17,7 @@ services:
     # /go/src/extensions
 
   frontend:
-    image: youngting/thingspanel-backend-vue:1.0
+    image: youngting/thingspanel-backend-vue:latest
     ports:
       - "8080:8080"
     expose:
