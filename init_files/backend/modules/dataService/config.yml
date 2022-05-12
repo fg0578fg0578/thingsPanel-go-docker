@@ -1,0 +1,16 @@
+mqtt:
+  broker: 172.19.0.5:10000
+  clientid: abd12f0d-a9bf-4532-a66d-dcaacccc
+  user: guest
+  pass: guest
+  topicToPublish: thingspanel.operation
+  topicToSubscribe: thingspanel.telemetry
+
+tcp:
+  port: :9998
+
+amqp:
+  host: rabbitmq
+  port: 5672
+  user: guest
+  pass: guest
