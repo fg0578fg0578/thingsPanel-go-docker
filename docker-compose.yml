@@ -1,9 +1,10 @@
 version: "3.0"
 services:
   backend:
-    image: youngting/thingspanel-go:latest
+    image: youngting/thingspanel-go:test
     ports:
       - "9999:9999"
+      - "9998:9998"
     networks:
       extnetwork:
         ipv4_address: 172.19.0.2
@@ -14,7 +15,13 @@ services:
     volumes:
       - ./init_files/extensions:/go/src/extensions
       - ./init_files/files:/go/src/files
-    # /go/src/extensions
+      - ./init_files/backend/:/go/src/
+
+    ulimits:
+      nproc: 524288
+      nofile:
+        soft: 20000
+        hard: 40000
 
   frontend:
     image: youngting/thingspanel-backend-vue:latest
@@ -30,7 +37,9 @@ services:
         ipv4_address: 172.19.0.3
     links:
       - backend
-
+    volumes:
+      - ./init_files/html:/usr/share/nginx/html/
+      - ./init_files/nginx.conf:/etc/nginx/nginx.conf
 
   database:
     image: timescale/timescaledb:latest-pg14

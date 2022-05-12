@@ -242,10 +242,42 @@ CREATE TABLE "widget" (
 ) WITH (oids = false);
 COMMENT ON COLUMN "widget"."device_id" IS '设备id';
 COMMENT ON COLUMN "widget"."widget_identifier" IS '图表标识符如: environmentpanel:normal';
-ALTER TABLE public.asset ADD CONSTRAINT asset_fk FOREIGN KEY (business_id) REFERENCES public.business(id) ON DELETE CASCADE ON UPDATE CASCADE;
-ALTER TABLE public.device ADD CONSTRAINT device_fk FOREIGN KEY (asset_id) REFERENCES public.asset(id) ON DELETE CASCADE ON UPDATE CASCADE;
-ALTER TABLE public.field_mapping ADD CONSTRAINT field_mapping_fk FOREIGN KEY (device_id) REFERENCES public.device(id) ON DELETE CASCADE ON UPDATE CASCADE;
-ALTER TABLE public.dashboard ADD CONSTRAINT dashboard_fk FOREIGN KEY (business_id) REFERENCES public.business(id) ON DELETE RESTRICT ON UPDATE CASCADE;
-ALTER TABLE public.widget ADD CONSTRAINT widget_fk FOREIGN KEY (dashboard_id) REFERENCES public.dashboard(id) ON DELETE CASCADE ON UPDATE CASCADE;
-ALTER TABLE public.widget ADD CONSTRAINT widget_fk_asset FOREIGN KEY (asset_id) REFERENCES public.asset(id) ON DELETE RESTRICT ON UPDATE CASCADE;
-ALTER TABLE public.conditions ADD CONSTRAINT conditions_fk FOREIGN KEY (business_id) REFERENCES public.business(id) ON DELETE RESTRICT ON UPDATE CASCADE;
+ALTER TABLE asset ADD CONSTRAINT asset_fk FOREIGN KEY (business_id) REFERENCES business(id) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE device ADD CONSTRAINT device_fk FOREIGN KEY (asset_id) REFERENCES asset(id) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE field_mapping ADD CONSTRAINT field_mapping_fk FOREIGN KEY (device_id) REFERENCES device(id) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE dashboard ADD CONSTRAINT dashboard_fk FOREIGN KEY (business_id) REFERENCES business(id) ON DELETE RESTRICT ON UPDATE CASCADE;
+ALTER TABLE widget ADD CONSTRAINT widget_fk FOREIGN KEY (dashboard_id) REFERENCES dashboard(id) ON DELETE CASCADE ON UPDATE CASCADE;
+--ALTER TABLE widget ADD CONSTRAINT widget_fk_asset FOREIGN KEY (asset_id) REFERENCES asset(id) ON DELETE RESTRICT ON UPDATE CASCADE;
+ALTER TABLE conditions ADD CONSTRAINT conditions_fk FOREIGN KEY (business_id) REFERENCES business(id) ON DELETE RESTRICT ON UPDATE CASCADE;
+ALTER TABLE ts_kv_latest ALTER COLUMN bool_v TYPE varchar(5) USING bool_v::varchar;
+ALTER TABLE ts_kv_latest DROP COLUMN ts;
+ALTER TABLE ts_kv_latest ADD ts int8 NOT NULL;
+ALTER TABLE ts_kv_latest ALTER COLUMN str_v TYPE varchar(10000) USING str_v::varchar;
+
+CREATE TABLE logo (
+	id varchar(36) NOT NULL,
+	system_name varchar(255) NULL,
+	theme varchar(99) NULL,
+	logo_one varchar(255) NULL,
+	logo_two varchar(255) NULL,
+	logo_three varchar(255) NULL,
+	custom_id varchar(99) NULL,
+	remark varchar(255) NULL,
+	CONSTRAINT logo_pk PRIMARY KEY (id)
+);
+COMMENT ON COLUMN logo.system_name IS '系统名称';
+COMMENT ON COLUMN logo.theme IS '主题';
+COMMENT ON COLUMN logo.logo_one IS '首页logo';
+COMMENT ON COLUMN logo.logo_two IS '缓冲logo';
+CREATE INDEX resources_created_at_idx ON resources (created_at DESC);
+
+ALTER TABLE device ADD "location" varchar(255) NULL;
+COMMENT ON COLUMN device."location" IS '设备位置';
+ALTER TABLE device ADD d_id varchar(255) NULL;
+COMMENT ON COLUMN device.d_id IS '设备唯一标志';
+
+INSERT INTO logo
+(id, system_name, theme, logo_one, logo_two, logo_three, custom_id, remark)
+VALUES('1d625cec-bf5b-2ad1-b135-a23b5fad05bf', 'ThingsPanel', 'blue', './files/logo/log-one.svg', './files/logo/logo-two.gif', './files/logo/logo-three.png', '', '');
+
+
