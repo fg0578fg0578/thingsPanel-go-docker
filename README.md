@@ -62,13 +62,13 @@ docker logs -f containerID
 ```
 
 ## 需要开放的端口
-8080前端服务端口
+8080（前端服务端口）
 
-9998tcp端口
+9998（tcp端口）
 
-9999 API端口
+9999（API端口）
 
-10000 mqtt端口
+10000（mqtt端口）
 
 mqtt订阅主题：thingspanel.telemetry
 
