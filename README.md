@@ -60,6 +60,17 @@ docker logs -f containerID
 或
 ./init_files/files/log/
 ```
+
+## 需要开放的端口
+8080前端服务端口
+9998tcp端口
+9999 API端口
+10000 mqtt端口
+mqtt订阅主题：thingspanel.telemetry
+mqtt默认账号：guest
+mqtt默认密码：guest
+温湿度数据推送案例：{"token":"00020101200001","type":"ep","values":{"temp":23.0,"hum":13}}
+（注意数字和字符串的区分）
 # 联系我们
 
 [wiki](http://wiki.thingspanel.cn/index.php?title=%E9%A6%96%E9%A1%B5)
