@@ -5,9 +5,15 @@
 - **git**
 ## linux环境准备
 - **安装docker**
+- dnf config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+- dnf install docker-ce docker-ce-cli containerd.io
+- systemctl start docker.service
+- systemctl enable docker.service
 - **安装docker-compose**
+- curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+- chmod +x /usr/local/bin/docker-compose
 - **git**
-
+- dnf install git -y
 **第二步 拉取项目**
 
 ```
