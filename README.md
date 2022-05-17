@@ -68,20 +68,17 @@ docker logs -f containerID
 ```
 
 ## 注意事项
-需要开发以下端口：
+- 需要开发以下端口：
 ```
 8080（前端服务端口）
 9998（tcp端口）
 9999（API端口）
 10000（mqtt端口）
 ```
-mqtt订阅主题：thingspanel.telemetry
-
-mqtt默认账号：guest
-
-mqtt默认密码：guest
-
-温湿度数据推送案例：{"token":"123456","type":"ep","values":{"temp":23.0,"hum":13}}
+- mqtt订阅主题：thingspanel.telemetry
+- mqtt默认账号：guest
+- mqtt默认密码：guest
+- 温湿度数据推送案例：{"token":"123456","type":"ep","values":{"temp":23.0,"hum":13}}
 
 （注意数字和字符串的区分）
 # 联系我们
