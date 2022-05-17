@@ -81,7 +81,7 @@ mqtt默认账号：guest
 
 mqtt默认密码：guest
 
-温湿度数据推送案例：{"token":"00020101200001","type":"ep","values":{"temp":23.0,"hum":13}}
+温湿度数据推送案例：{"token":"123456","type":"ep","values":{"temp":23.0,"hum":13}}
 
 （注意数字和字符串的区分）
 # 联系我们
