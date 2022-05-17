@@ -88,6 +88,6 @@ mqtt默认密码：guest
 
 [wiki](http://wiki.thingspanel.cn/index.php?title=%E9%A6%96%E9%A1%B5)
 
-论坛：[论坛](http://forum.thingspanel.cn/)
+[论坛](http://forum.thingspanel.cn/)
 
 qq群：260150504
