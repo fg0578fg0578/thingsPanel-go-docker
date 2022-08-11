@@ -20,7 +20,7 @@ services:
         hard: 40000
 
   frontend:
-    image: thingspanel/thingspanel-backend-vue:latest
+    image: thingspanel/thingspanel-vue:latest
     ports:
       - "8080:8080"
     expose:
