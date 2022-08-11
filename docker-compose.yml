@@ -44,8 +44,6 @@ services:
       - ./init_files/backend/TP.sql:/docker-entrypoint-initdb.d/TP.sql
     ports:
       - "5432:5432"
-    expose:
-      - "5432"
     environment:
       - "TZ=Asia/Shanghai"
       - "LC_ALL=C.UTF-8"
