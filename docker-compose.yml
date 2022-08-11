@@ -49,7 +49,7 @@ services:
       - "LC_ALL=C.UTF-8"
       - "POSTGRES_DB=ThingsPanel"
       - "POSTGRES_USER=postgres"
-      - "POSTGRES_PASSWORD=postgres"
+      - "POSTGRES_PASSWORD=postgresThingsPanel2022"
       - "POSTGRES_HOST_AUTH_METHOD=trust"
     hostname: postgres
     networks:
