@@ -57,7 +57,7 @@ services:
         ipv4_address: 172.19.0.4
 
   gmqtt:
-    image: thingspanel/gmqtt:latest
+    image: thingspanel/thingspanel-gmqtt:latest
     ports:
       - "1883:1883"
     hostname: gmqtt
