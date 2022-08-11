@@ -42,6 +42,7 @@ services:
     user: postgres
     volumes:
       - ./init_files/backend/TP.sql:/docker-entrypoint-initdb.d/TP.sql
+      - ./init_files/postgres:/var/lib/postgresql/data
     ports:
       - "5432:5432"
     environment:
@@ -64,6 +65,20 @@ services:
     networks:
       extnetwork:
         ipv4_address: 172.19.0.5
+
+  redis:
+    image: redis:6.2.7
+    command: redis-server --requirepass redis2022
+    volumes:
+      - ./init_files/redis:/data
+      - ./init_files/redis/conf/redis.conf:/usr/local/etc/redis/redis.conf
+      - ./init_files/redis:/logs
+    ports:
+      - "6379:6379"
+    hostname: redis
+    networks:
+      extnetwork:
+        ipv4_address: 172.19.0.6
 
 networks:
   extnetwork:
