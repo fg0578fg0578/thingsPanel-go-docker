@@ -1,24 +1,5 @@
 version: "3.0"
 services:
-  backend:
-    image: thingspanel/thingspanel-go:latest
-    ports:
-      - "9999:9999"
-      - "9998:9998"
-    networks:
-      extnetwork:
-        ipv4_address: 172.19.0.2
-    links:
-      - database
-      - gmqtt
-    volumes:
-      - ./init_files/backend/:/go/src/
-    ulimits:
-      nproc: 524288
-      nofile:
-        soft: 20000
-        hard: 40000
-
   frontend:
     image: thingspanel/thingspanel-vue:latest
     ports:
@@ -81,6 +62,25 @@ services:
     networks:
       extnetwork:
         ipv4_address: 172.19.0.6
+
+  backend:
+    image: thingspanel/thingspanel-go:latest
+    ports:
+      - "9999:9999"
+      - "9998:9998"
+    networks:
+      extnetwork:
+        ipv4_address: 172.19.0.2
+    links:
+      - database
+      - gmqtt
+    volumes:
+      - ./init_files/backend/:/go/src/
+    ulimits:
+      nproc: 524288
+      nofile:
+        soft: 20000
+        hard: 40000
 
 networks:
   extnetwork:
