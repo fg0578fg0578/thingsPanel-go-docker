@@ -75,7 +75,7 @@ services:
       - database
       - gmqtt
     volumes:
-      - ./init_files/backend/files:files
+      - ./init_files/backend/files:/app/files
     ulimits:
       nproc: 524288
       nofile:
