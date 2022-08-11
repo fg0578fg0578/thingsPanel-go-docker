@@ -15,7 +15,7 @@ services:
     links:
       - backend
     volumes:
-      - ./init_files/html:/usr/share/nginx/html/
+      - ./init_files/html:/usr/share/nginx/html
       - ./init_files/nginx.conf:/etc/nginx/nginx.conf
 
   database:
@@ -53,9 +53,9 @@ services:
     image: redis:6.2.7
     command: redis-server --requirepass redis2022
     volumes:
-      - ./init_files/redis:/data
+      - ./init_files/redis/data:/data
       - ./init_files/redis/conf/redis.conf:/usr/local/etc/redis/redis.conf
-      - ./init_files/redis:/logs
+      - ./init_files/redis/logs:/logs
     ports:
       - "6379:6379"
     hostname: redis
@@ -75,7 +75,7 @@ services:
       - database
       - gmqtt
     volumes:
-      - ./init_files/backend:/app/
+      - ./init_files/backend:/app
     ulimits:
       nproc: 524288
       nofile:
