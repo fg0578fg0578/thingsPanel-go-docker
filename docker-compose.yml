@@ -39,6 +39,8 @@ services:
 
   database:
     image: timescale/timescaledb:latest-pg12
+    security_opt:
+        - seccomp:unconfined
     user: postgres
     volumes:
       - ./init_files/backend/TP.sql:/docker-entrypoint-initdb.d/TP.sql
