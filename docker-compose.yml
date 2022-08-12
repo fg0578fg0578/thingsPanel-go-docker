@@ -20,12 +20,10 @@ services:
 
   database:
     image: timescale/timescaledb:latest-pg12
-    security_opt:
-      - seccomp:unconfined
     user: postgres
     volumes:
       - ./init_files/backend/TP.sql:/docker-entrypoint-initdb.d/TP.sql
-      - ./init_files/postgres/data:/var/lib/postgresql/data
+      - thingspanel-postgres:/var/lib/postgresql/data
     ports:
       - "5432:5432"
     environment:
@@ -90,13 +88,13 @@ services:
 volumes:
   thingspanel-go: {}
   thingspanel-html: {}
+  thingspanel-postgres: {}
 
 networks:
   extnetwork:
     ipam:
       config:
         - subnet: 172.19.0.0/16
-#          gateway: 172.19.0.1
 
 
 
