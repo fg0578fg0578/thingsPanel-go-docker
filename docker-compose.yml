@@ -87,6 +87,9 @@ services:
       nofile:
         soft: 20000
         hard: 40000
+volumes:
+  thingspanel-go: {}
+  thingspanel-html: {}
 
 networks:
   extnetwork:
