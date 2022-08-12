@@ -1,7 +1,7 @@
 version: "3.0"
 services:
   frontend:
-    image: thingspanel/thingspanel-vue:latest
+    image: thingspanel/thingspanel-vue:v0.3.0
     ports:
       - "8080:8080"
     expose:
@@ -39,7 +39,7 @@ services:
         ipv4_address: 172.19.0.4
 
   gmqtt:
-    image: thingspanel/thingspanel-gmqtt:latest
+    image: thingspanel/thingspanel-gmqtt:v0.3.0
     ports:
       - "1883:1883"
     hostname: gmqtt
@@ -62,7 +62,7 @@ services:
         ipv4_address: 172.19.0.6
 
   backend:
-    image: thingspanel/thingspanel-go:latest
+    image: thingspanel/thingspanel-go:v0.3.0
     ports:
       - "9999:9999"
       - "9998:9998"
