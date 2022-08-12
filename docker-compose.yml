@@ -90,7 +90,8 @@ services:
 volumes:
   thingspanel-go: {}
   thingspanel-html: {}
-
+security_opt:
+  - seccomp:unconfined
 networks:
   extnetwork:
     ipam:
