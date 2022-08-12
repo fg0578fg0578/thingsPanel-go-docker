@@ -15,7 +15,7 @@ services:
     links:
       - backend
     volumes:
-      - ./init_files/html:/usr/share/nginx/html
+      - thingspanel-html:/usr/share/nginx/html
       - ./init_files/nginx.conf:/etc/nginx/nginx.conf
 
   database:
@@ -71,11 +71,17 @@ services:
     networks:
       extnetwork:
         ipv4_address: 172.19.0.2
+    depends_on:
+      - gmqtt
+      - database
+      - redis
     links:
       - database
       - gmqtt
+      - redis
     volumes:
       - ./init_files/backend/files:/app/files
+      - thingspanel-go:/app
     ulimits:
       nproc: 524288
       nofile:
