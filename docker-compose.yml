@@ -25,7 +25,7 @@ services:
     user: postgres
     volumes:
       - ./init_files/backend/TP.sql:/docker-entrypoint-initdb.d/TP.sql
-      # - ./init_files/postgres/data/dir:/var/lib/postgresql/data
+      - ./init_files/postgres/data:/var/lib/postgresql/data
     ports:
       - "5432:5432"
     environment:
@@ -80,7 +80,7 @@ services:
       - gmqtt
       - redis
     volumes:
-      - ./init_files/backend/files:/app/files
+      - ./init_files/backend/logs:/app/files/logs
       - thingspanel-go:/app
     ulimits:
       nproc: 524288
