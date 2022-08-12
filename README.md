@@ -42,7 +42,7 @@
     > 在`thingsPanel-go-docker`目录下(win需要打开`cmd` 窗口)
 
     ```bash
-    # 以日志显示前台方式启动项目(默认账户和密码 admin@thingspanel.cn 123456)(默认端口8080)
+    # 以日志显示前台方式启动项目(默认账户和密码 super@super.cn 123456)(默认端口8080)
     docker-compose -f docker-compose.yml up
     # 或者以隐藏日志显示的方式启动项目
     docker-compose -f docker-compose.yml up -d
