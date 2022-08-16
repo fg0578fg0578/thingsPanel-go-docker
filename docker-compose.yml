@@ -62,7 +62,7 @@ services:
         ipv4_address: 172.19.0.6
 
   backend:
-    command: sh -c './wait-for.sh database:5432'
+    command: sh -c './wait-for-it.sh database:5432'
     image: thingspanel/thingspanel-go:v0.3.0
     ports:
       - "9999:9999"
