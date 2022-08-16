@@ -1,7 +1,7 @@
 version: "3.0"
 services:
   frontend:
-    image: thingspanel/thingspanel-vue:v0.3.0
+    image: thingspanel/rule-engine:v0.3.0
     ports:
       - "8080:8080"
     expose:
