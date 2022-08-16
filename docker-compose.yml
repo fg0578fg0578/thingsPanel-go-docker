@@ -62,7 +62,7 @@ services:
         ipv4_address: 172.19.0.6
 
   backend:
-    command: sh -c './wait-for-postgres.sh 172.19.0.4 postgres'
+    command: sh -c './wait-for-postgres.sh'
     image: thingspanel/thingspanel-go:v0.3.0
     ports:
       - "9999:9999"
