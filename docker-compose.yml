@@ -77,6 +77,7 @@ services:
       - database
       - gmqtt
       - redis
+    command: sh -c './wait-for.sh database:5432 && ./wait-for.sh gmqtt:1883 && ./wait-for.sh redis:6379'
     volumes:
       - ./init_files/backend/logs:/app/files/logs
       - thingspanel-go:/app
