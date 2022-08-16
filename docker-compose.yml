@@ -62,7 +62,6 @@ services:
         ipv4_address: 172.19.0.6
 
   backend:
-    command: ["./wait-for-postgres.sh"]
     image: thingspanel/thingspanel-go:v0.3.0
     ports:
       - "9999:9999"
@@ -81,6 +80,7 @@ services:
     volumes:
       - ./init_files/backend/logs:/app/files/logs
       - thingspanel-go:/app
+    restart: on-failure
     ulimits:
       nproc: 524288
       nofile:
