@@ -55,6 +55,7 @@ services:
     image: thingspanel/thingspanel-gmqtt:v0.4.0
     ports:
       - "1883:1883"
+      - "8083:8083"
     hostname: gmqtt
     networks:
       extnetwork:
