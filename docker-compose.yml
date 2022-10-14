@@ -116,6 +116,12 @@ services:
       - gmqtt
     volumes:
       - modbus-plugin:/app 
+    restart: on-failure
+    ulimits:
+      nproc: 524288
+      nofile:
+        soft: 20000
+        hard: 40000
 volumes:
   thingspanel-html: {}
   thingspanel-postgres: {}
