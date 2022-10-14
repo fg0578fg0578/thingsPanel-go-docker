@@ -1034,3 +1034,24 @@ INSERT INTO public.casbin_rule
 (id, ptype, v0, v1, v2, v3, v4, v5, v6, v7)
 VALUES(1293, 'p', '5b0969cb-ed0b-c664-1fab-d0ba90c39e04', '52a23456-775c-b731-7adf-a0fd3cddf649', 'allow', '', '', '', '', '');
 
+INSERT INTO public.tp_dict
+(id, dict_code, dict_value, "describe", created_at)
+VALUES('643f254a-0ac2-2616-c730-32c60dac7117', 'other_type', '1', '', 1663225360);
+INSERT INTO public.tp_dict
+(id, dict_code, dict_value, "describe", created_at)
+VALUES('fd55cc73-427e-7dfc-121e-1e4f73b55e65', 'chart_type', '1', '传感器', 1663226829);
+INSERT INTO public.tp_dict
+(id, dict_code, dict_value, "describe", created_at)
+VALUES('05fecef3-a1b1-4041-decf-59230f304fce', 'chart_type', '2', '控制器', 1663226845);
+INSERT INTO public.tp_dict
+(id, dict_code, dict_value, "describe", created_at)
+VALUES('9d855e7b-c949-034f-4b96-f18ac03e0eb6', 'chart_type', '3', '照明', 1663226870);
+INSERT INTO public.tp_dict
+(id, dict_code, dict_value, "describe", created_at)
+VALUES('c8bdaf38-d4da-5d29-4bf6-7e47ba497c88', 'chart_type', '4', '电力', 1663226875);
+INSERT INTO public.tp_dict
+(id, dict_code, dict_value, "describe", created_at)
+VALUES('e197fbb7-b3b6-f33d-7c63-6d9fb1d60876', 'chart_type', '5', '摄像头', 1663226918);
+INSERT INTO public.tp_dict
+(id, dict_code, dict_value, "describe", created_at)
+VALUES('4257cff7-ddf4-9977-a3ad-48630f5dc614', 'chart_type', '6', '其他', 1663226925);
