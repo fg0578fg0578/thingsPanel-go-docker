@@ -1,7 +1,7 @@
 version: "3.0"
 services:
   frontend:
-    image: thingspanel/thingspanel-vue:v0.3.0
+    image: thingspanel/thingspanel-vue:v0.4.0
     ports:
       - "8080:8080"
     expose:
@@ -21,7 +21,7 @@ services:
       - ./init_files/nginx.conf:/etc/nginx/nginx.conf
 
   rule-engine:
-    image: thingspanel/rule-engine:v0.3.0
+    image: thingspanel/rule-engine:v0.4.0
     ports:
       - "1880:1880"
     expose:
@@ -52,7 +52,7 @@ services:
         ipv4_address: 172.19.0.4
 
   gmqtt:
-    image: thingspanel/thingspanel-gmqtt:v0.3.0
+    image: thingspanel/thingspanel-gmqtt:v0.4.0
     ports:
       - "1883:1883"
     hostname: gmqtt
@@ -75,7 +75,7 @@ services:
         ipv4_address: 172.19.0.6
 
   backend:
-    image: thingspanel/thingspanel-go:v0.3.0
+    image: thingspanel/thingspanel-go:v0.4.0
     ports:
       - "9999:9999"
       - "9998:9998"
@@ -92,18 +92,35 @@ services:
       - gmqtt
       - redis
     volumes:
-      - ./init_files/backend/logs:/app/files/logs
       - thingspanel-go:/app
+      - ./init_files/backend/logs:/app/files/logs
     restart: on-failure
     ulimits:
       nproc: 524288
       nofile:
         soft: 20000
         hard: 40000
+  modbus-plugin:
+    image: thingspanel/modbus-protocol-plugin:v0.4.0
+    ports:
+      - "502:502"
+      - "503:503"
+    hostname: modbus-plugin
+    networks:
+      extnetwork:
+        ipv4_address: 172.19.0.8
+    depends_on:
+      - backend
+    links:
+      - backend
+      - gmqtt
+    volumes:
+      - modbus-plugin:/app 
 volumes:
-  thingspanel-go: {}
   thingspanel-html: {}
   thingspanel-postgres: {}
+  thingspanel-go: {}
+  modbus-plugin: {}
 
 networks:
   extnetwork:
