@@ -10,7 +10,7 @@
 - **安装docker**
 
     ```bash
-    dnf config-manager --add-repo <https://download.docker.com/linux/centos/docker-ce.repo>
+    dnf config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
     dnf install docker-ce docker-ce-cli containerd.io
     systemctl start docker.service
     systemctl enable docker.service
@@ -19,7 +19,7 @@
 - **安装docker-compose**
 
     ```bash
-    curl -L "<https://github.com/docker/compose/releases/download/v2.9.0/docker-compose>-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+    curl -L "https://github.com/docker/compose/releases/download/v2.9.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
     chmod +x /usr/local/bin/docker-compose
     ```
 
@@ -109,13 +109,16 @@ docker logs -f containerID
     > 5432（postogresql端口）
     > 6379（redis端口）
     ```
+- 登录
 
-- mqtt订阅主题：thingspanel.telemetry
-- mqtt默认账号：guest
-- mqtt默认密码：guest
-- 温湿度数据推送案例：{"token":"123456","type":"ep","values":{"temp":23.0,"hum":13}}
+    ```
+    输入网址:服务器ip:8080
+    输入账户:super@super.cn
+    输入密码:123456
+    ```
+- 设备接入
+    http://thingspanel.io/docs/equipment-access/mqtt
 
-    > （注意数字和字符串的区分）
 
 ## 联系我们
 
