@@ -812,115 +812,115 @@ ALTER TABLE public.tp_function ADD CONSTRAINT tp_function_pk PRIMARY KEY (id);
 ALTER TABLE public.tp_function ADD sort int4 NULL;
 
 INSERT INTO public.tp_function
-(id, function_name, menu_id, "path", name, component, title, icon, "type", function_code, parent_id, sort)
+(id, function_name, menu_id, "path", "name", component, title, icon, "type", function_code, parent_id, sort)
 VALUES('83e18dcd-c6c8-eca2-2859-11dd6c6e7c6d', '', NULL, '/list', 'BusinessList', '/pages/business/BusinessIndex.vue', 'COMMON.BUSINESS', 'flaticon2-rhombus', '1', '', '0', 999);
 INSERT INTO public.tp_function
-(id, function_name, menu_id, "path", name, component, title, icon, "type", function_code, parent_id, sort)
+(id, function_name, menu_id, "path", "name", component, title, icon, "type", function_code, parent_id, sort)
 VALUES('dce69d1d-8297-c5a4-1502-ace84dfe0209', '', NULL, '/strategy/list', 'StrategyList', '/pages/automation/AutomationIndex.vue', 'COMMON.AUTOMATION', 'flaticon2-hourglass', '1', '', '0', 996);
 INSERT INTO public.tp_function
-(id, function_name, menu_id, "path", name, component, title, icon, "type", function_code, parent_id, sort)
+(id, function_name, menu_id, "path", "name", component, title, icon, "type", function_code, parent_id, sort)
 VALUES('c17a3b9e-bd1f-2f10-4c65-d2ae7030087b', '', NULL, '/alarm/list', 'Alarm', '/pages/alarm/AlarmIndex.vue', 'COMMON.WARNINFO', 'flaticon2-warning', '1', '', '0', 995);
 INSERT INTO public.tp_function
-(id, function_name, menu_id, "path", name, component, title, icon, "type", function_code, parent_id, sort)
+(id, function_name, menu_id, "path", "name", component, title, icon, "type", function_code, parent_id, sort)
 VALUES('a59eefbf-de02-a348-30af-d7f16053f884', '', NULL, '', 'system_log', '', 'COMMON.SYSTEMLOG', 'flaticon-open-box', '0', '', '0', 994);
 INSERT INTO public.tp_function
-(id, function_name, menu_id, "path", name, component, title, icon, "type", function_code, parent_id, sort)
+(id, function_name, menu_id, "path", "name", component, title, icon, "type", function_code, parent_id, sort)
 VALUES('c41bc15c-17d0-89d2-8f7d-5d32d7f2fc64', '', NULL, '/chart/chart', 'chart', '/pages/chart/Chart.vue', 'COMMON.VISUALIZATIONCHART', '', '2', '', '6dab000b-7ced-a5ce-5fb0-5427f3bb8073', 0);
 INSERT INTO public.tp_function
-(id, function_name, menu_id, "path", name, component, title, icon, "type", function_code, parent_id, sort)
+(id, function_name, menu_id, "path", "name", component, title, icon, "type", function_code, parent_id, sort)
 VALUES('7c0c8fbb-6ba1-2323-511d-859c7923f954', '', NULL, '/log/list', 'LogList', '/pages/log/LogIndex.vue', 'COMMON.OPERATIONLOG', 'flaticon2-paper', '1', '', 'a59eefbf-de02-a348-30af-d7f16053f884', 999);
 INSERT INTO public.tp_function
-(id, function_name, menu_id, "path", name, component, title, icon, "type", function_code, parent_id, sort)
+(id, function_name, menu_id, "path", "name", component, title, icon, "type", function_code, parent_id, sort)
 VALUES('52a23456-775c-b731-7adf-a0fd3cddf649', '', NULL, '', 'BusinessAddButton', '', 'COMMON.NEWBUSINESS', '', '3', 'business:add', '83e18dcd-c6c8-eca2-2859-11dd6c6e7c6d', 999);
 INSERT INTO public.tp_function
-(id, function_name, menu_id, "path", name, component, title, icon, "type", function_code, parent_id, sort)
+(id, function_name, menu_id, "path", "name", component, title, icon, "type", function_code, parent_id, sort)
 VALUES('77d7133a-6434-bd51-232b-6b7fd862e50f', '', NULL, '', 'BusinessEdit', '', 'COMMON.EDITASSETSNAME', '', '3', 'business:edit', '83e18dcd-c6c8-eca2-2859-11dd6c6e7c6d', 998);
 INSERT INTO public.tp_function
-(id, function_name, menu_id, "path", name, component, title, icon, "type", function_code, parent_id, sort)
+(id, function_name, menu_id, "path", "name", component, title, icon, "type", function_code, parent_id, sort)
 VALUES('fd332720-1d06-9ba2-cf32-226cb2f54461', '', NULL, '', 'BusinessDel', '', 'COMMON.DELETE', '', '3', 'business:del', '83e18dcd-c6c8-eca2-2859-11dd6c6e7c6d', 997);
 INSERT INTO public.tp_function
-(id, function_name, menu_id, "path", name, component, title, icon, "type", function_code, parent_id, sort)
+(id, function_name, menu_id, "path", "name", component, title, icon, "type", function_code, parent_id, sort)
 VALUES('b143ccd9-eb65-655a-a41f-4311da5ed8c0', '', NULL, '/equipment/index', 'Equipment', '/pages/equipment/EquipmentIndex.vue', 'COMMON.EQUIPMENTLOG', 'flaticon-interface-3', '1', '', 'a59eefbf-de02-a348-30af-d7f16053f884', 998);
 INSERT INTO public.tp_function
-(id, function_name, menu_id, "path", name, component, title, icon, "type", function_code, parent_id, sort)
-VALUES('7cac14a0-0ff2-57d9-5465-597760bd2cb1', '', NULL, '', 'RuleEngine', '', 'COMMON.RULEENGINE', 'flaticon2-gift-1', '0', '', '0', 992);
-INSERT INTO public.tp_function
-(id, function_name, menu_id, "path", name, component, title, icon, "type", function_code, parent_id, sort)
-VALUES('b4ad8251-ebdb-4c40-096a-eb74c59f7815', '', NULL, '', 'AddUser', '', 'COMMON.AddUSER', '', '3', 'sys:user:add', '2a1744d7-8440-c0a5-940a-9386ddfb1d0b', 0);
-INSERT INTO public.tp_function
-(id, function_name, menu_id, "path", name, component, title, icon, "type", function_code, parent_id, sort)
-VALUES('3f4348b0-f39d-ec42-14b4-623cbeadb12f', '', NULL, '/transpond/index', 'Transpond', '/pages/transpond/TranspondIndex.vue', 'COMMON.TRANSPOND', 'flaticon-upload-1', '1', '', '7cac14a0-0ff2-57d9-5465-597760bd2cb1', 998);
-INSERT INTO public.tp_function
-(id, function_name, menu_id, "path", name, component, title, icon, "type", function_code, parent_id, sort)
-VALUES('4f2791e5-3c13-7249-c25f-77f6f787f574', '', NULL, '', 'SystemManagement', '', 'COMMON.SYSTEMMANAGEMENT', 'flaticon2-gear', '0', '', '0', 990);
-INSERT INTO public.tp_function
-(id, function_name, menu_id, "path", name, component, title, icon, "type", function_code, parent_id, sort)
-VALUES('3786391a-6e8f-659d-1500-d2c3f82d6933', '', NULL, '/system/index', 'SystemSetup', '/pages/system/index.vue', 'COMMON.SYSTEMSETUP', 'flaticon-upload-1', '1', '', '4f2791e5-3c13-7249-c25f-77f6f787f574', 999);
-INSERT INTO public.tp_function
-(id, function_name, menu_id, "path", name, component, title, icon, "type", function_code, parent_id, sort)
-VALUES('2a1744d7-8440-c0a5-940a-9386ddfb1d0b', '', NULL, '/users/user', 'User', '/pages/users/UserIndex.vue', 'COMMON.USERS', 'flaticon2-user', '1', '', '4f2791e5-3c13-7249-c25f-77f6f787f574', 998);
-INSERT INTO public.tp_function
-(id, function_name, menu_id, "path", name, component, title, icon, "type", function_code, parent_id, sort)
-VALUES('7ce628ae-d494-d71c-9eb0-148e6bf47665', '', NULL, '/management/index', 'Management', '/pages/management/index.vue', 'COMMON.MANAGEMENT', 'flaticon-upload-1', '1', '', '4f2791e5-3c13-7249-c25f-77f6f787f574', 997);
-INSERT INTO public.tp_function
-(id, function_name, menu_id, "path", name, component, title, icon, "type", function_code, parent_id, sort)
-VALUES('a53dba0c-3388-0f49-35f3-6e56ff9acc68', '', NULL, '', 'DeviceManagment', '', 'COMMON.DEVICE', '', '3', 'business:device', '83e18dcd-c6c8-eca2-2859-11dd6c6e7c6d', 996);
-INSERT INTO public.tp_function
-(id, function_name, menu_id, "path", name, component, title, icon, "type", function_code, parent_id, sort)
-VALUES('1bc93bad-41d3-ca37-638b-f79a29c1388b', '', NULL, '/data/index', 'Datas', '/pages/datas/DataIndex.vue', 'COMMON.DATAS', 'menu-icon flaticon2-list', '1', '', '0', 998);
-INSERT INTO public.tp_function
-(id, function_name, menu_id, "path", name, component, title, icon, "type", function_code, parent_id, sort)
-VALUES('539b8e97-b791-3260-8b23-1beca9497b19', '', NULL, '', 'AddPermission', '', 'COMMON.PERMISSIONADD', '', '3', 'sys:permission:add', '4231ea2c-a2fb-bd9c-8966-c7d654289deb', 0);
-INSERT INTO public.tp_function
-(id, function_name, menu_id, "path", name, component, title, icon, "type", function_code, parent_id, sort)
-VALUES('17f776f0-be0c-a216-a03a-00944865e8d7', '', NULL, '', 'EditPermission', '', 'COMMON.EDIT', '', '3', 'sys:permission:edit', '4231ea2c-a2fb-bd9c-8966-c7d654289deb', 0);
-INSERT INTO public.tp_function
-(id, function_name, menu_id, "path", name, component, title, icon, "type", function_code, parent_id, sort)
-VALUES('4231ea2c-a2fb-bd9c-8966-c7d654289deb', '', NULL, '/permission/index', 'PermissionManagement', '/pages/system/permissions/Index.vue', 'COMMON.PERMISSIONMANAGEMENT', 'flaticon-upload-1', '1', '', '4f2791e5-3c13-7249-c25f-77f6f787f574', 996);
-INSERT INTO public.tp_function
-(id, function_name, menu_id, "path", name, component, title, icon, "type", function_code, parent_id, sort)
-VALUES('363116a3-1c00-b875-1386-415ea0839849', '', NULL, '/list/device', 'device', '/pages/device/DeviceIndex.vue', 'COMMON.DEVICE', '', '2', '', 'a53dba0c-3388-0f49-35f3-6e56ff9acc68', 0);
-INSERT INTO public.tp_function
-(id, function_name, menu_id, "path", name, component, title, icon, "type", function_code, parent_id, sort)
-VALUES('b37757aa-3665-3d9d-994f-54e6ad37aff7', '', NULL, '', 'EditRole', '', 'COMMON.EDIT', '', '3', 'sys:role:edit', '7ce628ae-d494-d71c-9eb0-148e6bf47665', 0);
-INSERT INTO public.tp_function
-(id, function_name, menu_id, "path", name, component, title, icon, "type", function_code, parent_id, sort)
+(id, function_name, menu_id, "path", "name", component, title, icon, "type", function_code, parent_id, sort)
 VALUES('67b97839-919f-0976-2c79-c921adbec66e', '', NULL, '/strategy/alarmlist', 'AlarmStrategy', '/pages/automation/alarm/AlarmStrategy.vue', 'COMMON.ALARMSTRATEGY', '', '2', '', 'dce69d1d-8297-c5a4-1502-ace84dfe0209', 0);
 INSERT INTO public.tp_function
-(id, function_name, menu_id, "path", name, component, title, icon, "type", function_code, parent_id, sort)
+(id, function_name, menu_id, "path", "name", component, title, icon, "type", function_code, parent_id, sort)
 VALUES('8508677d-27ea-1158-c382-2bcf2b630346', '', NULL, '/strategy/strlist', 'ControlStrategy', '/pages/automation/control/ControlStrategy.vue', 'COMMON.CONTROLSTRATRGY', '', '2', '', 'dce69d1d-8297-c5a4-1502-ace84dfe0209', 0);
 INSERT INTO public.tp_function
-(id, function_name, menu_id, "path", name, component, title, icon, "type", function_code, parent_id, sort)
+(id, function_name, menu_id, "path", "name", component, title, icon, "type", function_code, parent_id, sort)
+VALUES('7cac14a0-0ff2-57d9-5465-597760bd2cb1', '', NULL, '', 'RuleEngine', '', 'COMMON.RULEENGINE', 'flaticon2-gift-1', '0', '', '0', 992);
+INSERT INTO public.tp_function
+(id, function_name, menu_id, "path", "name", component, title, icon, "type", function_code, parent_id, sort)
+VALUES('b4ad8251-ebdb-4c40-096a-eb74c59f7815', '', NULL, '', 'AddUser', '', 'COMMON.AddUSER', '', '3', 'sys:user:add', '2a1744d7-8440-c0a5-940a-9386ddfb1d0b', 0);
+INSERT INTO public.tp_function
+(id, function_name, menu_id, "path", "name", component, title, icon, "type", function_code, parent_id, sort)
+VALUES('3f4348b0-f39d-ec42-14b4-623cbeadb12f', '', NULL, '/transpond/index', 'Transpond', '/pages/transpond/TranspondIndex.vue', 'COMMON.TRANSPOND', 'flaticon-upload-1', '1', '', '7cac14a0-0ff2-57d9-5465-597760bd2cb1', 998);
+INSERT INTO public.tp_function
+(id, function_name, menu_id, "path", "name", component, title, icon, "type", function_code, parent_id, sort)
+VALUES('4f2791e5-3c13-7249-c25f-77f6f787f574', '', NULL, '', 'SystemManagement', '', 'COMMON.SYSTEMMANAGEMENT', 'flaticon2-gear', '0', '', '0', 990);
+INSERT INTO public.tp_function
+(id, function_name, menu_id, "path", "name", component, title, icon, "type", function_code, parent_id, sort)
+VALUES('3786391a-6e8f-659d-1500-d2c3f82d6933', '', NULL, '/system/index', 'SystemSetup', '/pages/system/index.vue', 'COMMON.SYSTEMSETUP', 'flaticon-upload-1', '1', '', '4f2791e5-3c13-7249-c25f-77f6f787f574', 999);
+INSERT INTO public.tp_function
+(id, function_name, menu_id, "path", "name", component, title, icon, "type", function_code, parent_id, sort)
+VALUES('2a1744d7-8440-c0a5-940a-9386ddfb1d0b', '', NULL, '/users/user', 'User', '/pages/users/UserIndex.vue', 'COMMON.USERS', 'flaticon2-user', '1', '', '4f2791e5-3c13-7249-c25f-77f6f787f574', 998);
+INSERT INTO public.tp_function
+(id, function_name, menu_id, "path", "name", component, title, icon, "type", function_code, parent_id, sort)
+VALUES('7ce628ae-d494-d71c-9eb0-148e6bf47665', '', NULL, '/management/index', 'Management', '/pages/management/index.vue', 'COMMON.MANAGEMENT', 'flaticon-upload-1', '1', '', '4f2791e5-3c13-7249-c25f-77f6f787f574', 997);
+INSERT INTO public.tp_function
+(id, function_name, menu_id, "path", "name", component, title, icon, "type", function_code, parent_id, sort)
+VALUES('a53dba0c-3388-0f49-35f3-6e56ff9acc68', '', NULL, '', 'DeviceManagment', '', 'COMMON.DEVICE', '', '3', 'business:device', '83e18dcd-c6c8-eca2-2859-11dd6c6e7c6d', 996);
+INSERT INTO public.tp_function
+(id, function_name, menu_id, "path", "name", component, title, icon, "type", function_code, parent_id, sort)
+VALUES('1bc93bad-41d3-ca37-638b-f79a29c1388b', '', NULL, '/data/index', 'Datas', '/pages/datas/DataIndex.vue', 'COMMON.DATAS', 'menu-icon flaticon2-list', '1', '', '0', 998);
+INSERT INTO public.tp_function
+(id, function_name, menu_id, "path", "name", component, title, icon, "type", function_code, parent_id, sort)
+VALUES('539b8e97-b791-3260-8b23-1beca9497b19', '', NULL, '', 'AddPermission', '', 'COMMON.PERMISSIONADD', '', '3', 'sys:permission:add', '4231ea2c-a2fb-bd9c-8966-c7d654289deb', 0);
+INSERT INTO public.tp_function
+(id, function_name, menu_id, "path", "name", component, title, icon, "type", function_code, parent_id, sort)
+VALUES('17f776f0-be0c-a216-a03a-00944865e8d7', '', NULL, '', 'EditPermission', '', 'COMMON.EDIT', '', '3', 'sys:permission:edit', '4231ea2c-a2fb-bd9c-8966-c7d654289deb', 0);
+INSERT INTO public.tp_function
+(id, function_name, menu_id, "path", "name", component, title, icon, "type", function_code, parent_id, sort)
+VALUES('4231ea2c-a2fb-bd9c-8966-c7d654289deb', '', NULL, '/permission/index', 'PermissionManagement', '/pages/system/permissions/Index.vue', 'COMMON.PERMISSIONMANAGEMENT', 'flaticon-upload-1', '1', '', '4f2791e5-3c13-7249-c25f-77f6f787f574', 996);
+INSERT INTO public.tp_function
+(id, function_name, menu_id, "path", "name", component, title, icon, "type", function_code, parent_id, sort)
+VALUES('363116a3-1c00-b875-1386-415ea0839849', '', NULL, '/list/device', 'device', '/pages/device/DeviceIndex.vue', 'COMMON.DEVICE', '', '2', '', 'a53dba0c-3388-0f49-35f3-6e56ff9acc68', 0);
+INSERT INTO public.tp_function
+(id, function_name, menu_id, "path", "name", component, title, icon, "type", function_code, parent_id, sort)
+VALUES('b37757aa-3665-3d9d-994f-54e6ad37aff7', '', NULL, '', 'EditRole', '', 'COMMON.EDIT', '', '3', 'sys:role:edit', '7ce628ae-d494-d71c-9eb0-148e6bf47665', 0);
+INSERT INTO public.tp_function
+(id, function_name, menu_id, "path", "name", component, title, icon, "type", function_code, parent_id, sort)
 VALUES('d8613453-278c-289c-6e18-ee58f6eb540b', '', NULL, '', 'DeletePermission', '', 'COMMON.DELETE', '', '3', 'sys:permission:del', '4231ea2c-a2fb-bd9c-8966-c7d654289deb', 0);
 INSERT INTO public.tp_function
-(id, function_name, menu_id, "path", name, component, title, icon, "type", function_code, parent_id, sort)
+(id, function_name, menu_id, "path", "name", component, title, icon, "type", function_code, parent_id, sort)
 VALUES('1988db79-dcb6-f8e5-4984-90e131efa526', '', NULL, '', 'SearchPermission', '', 'COMMON.SEARCH', '', '3', 'sys:permission:search', '4231ea2c-a2fb-bd9c-8966-c7d654289deb', 0);
 INSERT INTO public.tp_function
-(id, function_name, menu_id, "path", name, component, title, icon, "type", function_code, parent_id, sort)
+(id, function_name, menu_id, "path", "name", component, title, icon, "type", function_code, parent_id, sort)
 VALUES('a8ebb8af-adab-90fa-a553-49667370fc5f', '', NULL, '/access_engine/index', 'AccessEngine', '/pages/access-engine/AccessEngineIndex.vue', 'COMMON.NETWORKCOMPONENTS', 'flaticon-upload-1', '1', '', '7cac14a0-0ff2-57d9-5465-597760bd2cb1', 999);
 INSERT INTO public.tp_function
-(id, function_name, menu_id, "path", name, component, title, icon, "type", function_code, parent_id, sort)
+(id, function_name, menu_id, "path", "name", component, title, icon, "type", function_code, parent_id, sort)
 VALUES('9c4d044d-19c4-1b6c-c9d3-4d78e01ecb58', '', NULL, '/editpassword', 'EditPassword', '/pages/users/EditPassword.vue', 'COMMON.CHANGEPASSWORD', '', '3', 'sys:user:editpassword', '2a1744d7-8440-c0a5-940a-9386ddfb1d0b', 0);
 INSERT INTO public.tp_function
-(id, function_name, menu_id, "path", name, component, title, icon, "type", function_code, parent_id, sort)
+(id, function_name, menu_id, "path", "name", component, title, icon, "type", function_code, parent_id, sort)
 VALUES('59b4f53f-2e55-dc2b-a643-4a7fa62291a8', '', NULL, '', 'DelUser', '', 'COMMON.DELETE', '', '3', 'sys:user:del', '2a1744d7-8440-c0a5-940a-9386ddfb1d0b', 0);
 INSERT INTO public.tp_function
-(id, function_name, menu_id, "path", name, component, title, icon, "type", function_code, parent_id, sort)
+(id, function_name, menu_id, "path", "name", component, title, icon, "type", function_code, parent_id, sort)
 VALUES('5938f5ba-5970-759a-04c9-3595fd637c10', '', NULL, '', 'DelRole', '', 'COMMON.DELETE', '', '3', 'sys:role:del', '7ce628ae-d494-d71c-9eb0-148e6bf47665', 0);
 INSERT INTO public.tp_function
-(id, function_name, menu_id, "path", name, component, title, icon, "type", function_code, parent_id, sort)
+(id, function_name, menu_id, "path", "name", component, title, icon, "type", function_code, parent_id, sort)
 VALUES('065e4a85-aa03-4f59-0b00-8a7df1b03d87', '', NULL, '', 'AssignPermission', '', 'COMMON.PERMISSIONMANAGEMENT', '', '3', 'sys:role:assign', '7ce628ae-d494-d71c-9eb0-148e6bf47665', 0);
 INSERT INTO public.tp_function
-(id, function_name, menu_id, "path", name, component, title, icon, "type", function_code, parent_id, sort)
+(id, function_name, menu_id, "path", "name", component, title, icon, "type", function_code, parent_id, sort)
 VALUES('ec7a22ed-919d-7959-6737-145198f6172f', '', NULL, '/market', 'Market', '/pages/plugin/index.vue', 'COMMON.MARKET', 'flaticon2-supermarket', '1', '', '0', 991);
 INSERT INTO public.tp_function
-(id, function_name, menu_id, "path", name, component, title, icon, "type", function_code, parent_id, sort)
+(id, function_name, menu_id, "path", "name", component, title, icon, "type", function_code, parent_id, sort)
 VALUES('6dab000b-7ced-a5ce-5fb0-5427f3bb8073', '', NULL, '/chart/list', 'ChartList', '/pages/chart/List.vue', 'COMMON.VISUALIZATION', 'flaticon2-laptop', '1', '', '0', 997);
 INSERT INTO public.tp_function
-(id, function_name, menu_id, "path", name, component, title, icon, "type", function_code, parent_id, sort)
+(id, function_name, menu_id, "path", "name", component, title, icon, "type", function_code, parent_id, sort)
 VALUES('9805e606-1c3e-565f-1380-d05eb1aeb0a9', '', NULL, '/chart/list/device_chart', 'DeviceChart', '/pages/chart/device_chart/DeviceChart.vue', 'COMMON.DEVICE_CHART', '', '2', '', '6dab000b-7ced-a5ce-5fb0-5427f3bb8073', 0);
 INSERT INTO public.tp_function
-(id, function_name, menu_id, "path", name, component, title, icon, "type", function_code, parent_id, sort)
+(id, function_name, menu_id, "path", "name", component, title, icon, "type", function_code, parent_id, sort)
 VALUES('c7a4dbd4-3e40-7c48-819a-c4d447833dc3', '', NULL, '/visual/display', 'VisualDisplay', '/pages/visual/display/index.vue', 'COMMON.VISUALIZATIONSCREEN', '', '2', '', '6dab000b-7ced-a5ce-5fb0-5427f3bb8073', 0);
 
 INSERT INTO public.tp_role
@@ -1046,7 +1046,7 @@ VALUES('4257cff7-ddf4-9977-a3ad-48630f5dc614', 'chart_type', '6', '其他', 1663
 
 INSERT INTO public.device_model
 (id, model_name, flag, chart_data, model_type, "describe", "version", author, sort, issued, remark, created_at)
-VALUES('5867753e-cb2d-32dc-a76d-7942d7ebcffc', '标准温湿度传感器', 0, '{"info":{"pluginName":"温湿度传感器","pluginCategory":"1","author":"thingspanel","version":"v1.0.0","description":"标准温湿度传感器"},"tsl":{"properties":[{"dataType":"float","dataRange":"0-999","stepLength":0.1,"unit":"-","name":"humidity","title":"湿度"},{"dataType":"float","dataRange":"0-999","stepLength":0.1,"unit":"-","name":"temperature","title":"温度"}],"option":{"classify":"custom"}},"chart":[{"tooltip":{"formatter":"{a} <br/>{b} : {c}%"},"series":[{"name":"Pressure","type":"gauge","startAngle":200,"endAngle":-20,"offsetCenter":[0,"-15%"],"min":0,"max":60,"axisTick":{"show":true,"splitNumber":2,"length":2,"lineStyle":{"color":"#ddd"}},"splitLine":{"show":false,"length":10,"lineStyle":{"color":"auto"}},"axisLabel":{"show":true,"distance":12,"textStyle":{"color":"#fff","fontSize":12}},"axisLine":{"lineStyle":{"width":6,"color":[[0.3,"#67e0e3"],[0.7,"#37a2da"],[1,"#fd666d"]]}},"progress":{"show":true,"width":8,"itemStyle":{"color":"#63e33d"}},"pointer":{"show":true,"width":3,"itemStyle":{"color":"#63e33d"}},"detail":{"formatter":"{value}°C","fontSize":16,"color":"#63e33d"},"data":[{"value":0,"name":""}]}],"simulator":{"funcArr":["return +(Math.random() * 60).toFixed(2);"],"interval":5000},"name":"温度当前值","mapping":["temperature"],"controlType":"dashboard","id":"Eqv12U1ZkrB0"},{"tooltip":{"formatter":"{a} <br/>{b} : {c}%"},"series":[{"name":"Pressure","type":"gauge","startAngle":200,"endAngle":-20,"offsetCenter":[0,"-15%"],"min":0,"max":60,"axisTick":{"show":true,"splitNumber":2,"length":2,"lineStyle":{"color":"#ddd"}},"splitLine":{"show":false,"length":10,"lineStyle":{"color":"auto"}},"axisLabel":{"show":true,"distance":12,"textStyle":{"color":"#fff","fontSize":12}},"axisLine":{"lineStyle":{"width":6,"color":[[0.3,"#67e0e3"],[0.7,"#37a2da"],[1,"#fd666d"]]}},"progress":{"show":true,"width":8,"itemStyle":{"color":"#63e33d"}},"pointer":{"show":true,"width":3,"itemStyle":{"color":"#63e33d"}},"detail":{"formatter":"{value}°C","fontSize":16,"color":"#63e33d"},"data":[{"value":0,"name":""}]}],"simulator":{"funcArr":["return +(Math.random() * 60).toFixed(2);"],"interval":5000},"name":"湿度当前值","mapping":["humidity"],"controlType":"dashboard","id":"UXLJExKQoZ7K"},{"xAxis":{"type":"category","axisLine":{"lineStyle":{"color":"#fff"}},"data":[""]},"yAxis":{"type":"value","axisLine":{"lineStyle":{"color":"#fff"}}},"series":[{"data":[0],"type":"line"}],"name":"温度历史数据","mapping":["temperature"],"controlType":"history","id":"vnOFlRongppl"},{"xAxis":{"type":"category","axisLine":{"lineStyle":{"color":"#fff"}},"data":[""]},"yAxis":{"type":"value","axisLine":{"lineStyle":{"color":"#fff"}}},"series":[{"data":[0],"type":"line"}],"name":"湿度历史数据","mapping":["humidity"],"controlType":"history","id":"uw8luBewc9f7"}],"publish":{"isPub":false}}'::json, '1', '', 'v0.1', 'thingspanel', 0, 0, '', 1665748873);
+VALUES('5867753e-cb2d-32dc-a76d-7942d7ebcffc', '标准温湿度传感器', 0, '{"info":{"pluginName":"温湿度传感器","pluginCategory":"1","author":"thingspanel","version":"v1.0.0","description":"标准温湿度传感器"},"tsl":{"properties":[{"dataType":"float","dataRange":"0-999","stepLength":0.1,"unit":"-","name":"humidity","title":"湿度"},{"dataType":"float","dataRange":"0-999","stepLength":0.1,"unit":"-","name":"temperature","title":"温度"}],"option":{"classify":"custom"}},"chart":[{"tooltip":{"formatter":"{a} <br/>{b} : {c}%"},"series":[{"name":"Pressure","type":"gauge","startAngle":200,"endAngle":-20,"offsetCenter":[0,"-15%"],"min":0,"max":60,"axisTick":{"show":true,"splitNumber":2,"length":2,"lineStyle":{"color":"#ddd"}},"splitLine":{"show":false,"length":10,"lineStyle":{"color":"auto"}},"axisLabel":{"show":true,"distance":12,"textStyle":{"color":"#fff","fontSize":12}},"axisLine":{"lineStyle":{"width":6,"color":[[0.3,"#67e0e3"],[0.7,"#37a2da"],[1,"#fd666d"]]}},"progress":{"show":true,"width":8,"itemStyle":{"color":"#63e33d"}},"pointer":{"show":true,"width":3,"itemStyle":{"color":"#63e33d"}},"detail":{"formatter":"{value}°C","fontSize":16,"color":"#63e33d"},"data":[{"value":0,"name":""}]}],"simulator":{"funcArr":["return +(Math.random() * 60).toFixed(2);"],"interval":5000},"name":"温度当前值","mapping":["temperature"],"controlType":"dashboard","id":"Eqv12U1ZkrB0"},{"tooltip":{"formatter":"{a} <br/>{b} : {c}%"},"series":[{"name":"Pressure","type":"gauge","startAngle":200,"endAngle":-20,"offsetCenter":[0,"-15%"],"min":0,"max":60,"axisTick":{"show":true,"splitNumber":2,"length":2,"lineStyle":{"color":"#ddd"}},"splitLine":{"show":false,"length":10,"lineStyle":{"color":"auto"}},"axisLabel":{"show":true,"distance":12,"textStyle":{"color":"#fff","fontSize":12}},"axisLine":{"lineStyle":{"width":6,"color":[[0.3,"#67e0e3"],[0.7,"#37a2da"],[1,"#fd666d"]]}},"progress":{"show":true,"width":8,"itemStyle":{"color":"#63e33d"}},"pointer":{"show":true,"width":3,"itemStyle":{"color":"#63e33d"}},"detail":{"formatter":"{value}°C","fontSize":16,"color":"#63e33d"},"data":[{"value":0,"name":""}]}],"simulator":{"funcArr":["return +(Math.random() * 60).toFixed(2);"],"interval":5000},"name":"湿度当前值","mapping":["humidity"],"controlType":"dashboard","id":"UXLJExKQoZ7K"},{"xAxis":{"type":"category","axisLine":{"lineStyle":{"color":"#fff"}},"data":[""]},"yAxis":{"type":"value","axisLine":{"lineStyle":{"color":"#fff"}}},"series":[{"data":[0],"type":"line"}],"name":"温度历史数据","mapping":["temperature"],"controlType":"history","id":"vnOFlRongppl"},{"xAxis":{"type":"category","axisLine":{"lineStyle":{"color":"#fff"}},"data":[""]},"yAxis":{"type":"value","axisLine":{"lineStyle":{"color":"#fff"}}},"series":[{"data":[0],"type":"line"}],"name":"湿度当前值","mapping":["humidity"],"controlType":"history","id":"uw8luBewc9f7"}],"publish":{"isPub":false}}'::json, '1', '', 'v0.1', 'thingspanel', 0, 0, '', 1665748873);
 ALTER TABLE public.device ADD sub_device_addr varchar(36) NULL;
 COMMENT ON COLUMN public.device.sub_device_addr IS '子设备地址';
 
@@ -1089,3 +1089,69 @@ ALTER TABLE public.tp_script RENAME COLUMN script_content TO script_content_a;
 
 ALTER TABLE public.device ADD script_id varchar(36) NULL;
 COMMENT ON COLUMN public.device.script_id IS '脚本id';
+
+CREATE TABLE public.tp_product (
+	id varchar(36) NOT NULL,
+	name varchar(99) NOT NULL,
+	serial_number varchar(99) NOT NULL,
+	protocol_type varchar(36) NOT NULL,
+	auth_type varchar(36) NOT NULL,
+	plugin json NOT NULL DEFAULT '{}'::json,
+	"describe" varchar(255) NULL,
+	created_time int8 NULL,
+	remark varchar(255) NULL,
+	CONSTRAINT t_product_pk PRIMARY KEY (id),
+	CONSTRAINT t_product_un UNIQUE (serial_number)
+);
+
+-- Column comments
+
+COMMENT ON COLUMN public.tp_product.name IS '产品名称';
+COMMENT ON COLUMN public.tp_product.serial_number IS '产品编号';
+COMMENT ON COLUMN public.tp_product.protocol_type IS '协议类型';
+COMMENT ON COLUMN public.tp_product.auth_type IS '认证方式';
+COMMENT ON COLUMN public.tp_product.plugin IS '插件';
+
+CREATE TABLE public.tp_batch (
+	id varchar(36) NOT NULL,
+	batch_number varchar(36) NOT NULL,
+	product_id varchar(36) NOT NULL,
+	device_number int NOT NULL,
+	generate_flag varchar NOT NULL DEFAULT 0,
+	"describe" varchar(255) NULL,
+	created_time int8 NULL,
+	remark varchar(255) NULL,
+	CONSTRAINT t_batch_pk PRIMARY KEY (id),
+	CONSTRAINT t_batch_un UNIQUE (batch_number,product_id),
+	CONSTRAINT t_batch_fk FOREIGN KEY (product_id) REFERENCES public.t_product(id) ON DELETE RESTRICT
+);
+
+-- Column comments
+
+COMMENT ON COLUMN public.tp_batch.batch_number IS '批次编号';
+COMMENT ON COLUMN public.tp_batch.product_id IS '产品id';
+COMMENT ON COLUMN public.tp_batch.device_number IS '设备数量';
+COMMENT ON COLUMN public.tp_batch.generate_flag IS '0-未生成 1-已生成';
+
+CREATE TABLE public.tp_generate_device (
+	id varchar(36) NOT NULL,
+	batch_id varchar(36) NOT NULL,
+	"token" varchar(36) NOT NULL,
+	"password" varchar(36) NULL,
+	activate_flag varchar(36) NOT NULL DEFAULT 0,
+	activate_date varchar(36) NULL,
+	device_id varchar(36) NULL,
+	created_time int8 NULL,
+	remark varchar(255) NULL,
+	CONSTRAINT t_generate_device_pk PRIMARY KEY (id),
+	CONSTRAINT t_generate_device_fk FOREIGN KEY (batch_id) REFERENCES public.t_batch(id) ON DELETE CASCADE
+);
+
+-- Column comments
+
+COMMENT ON COLUMN public.tp_generate_device.activate_flag IS '0-未激活 1-已激活';
+COMMENT ON COLUMN public.tp_generate_device.activate_date IS '激活日期';
+
+ALTER TABLE public.tp_batch ADD access_address varchar(36) NULL;
+COMMENT ON COLUMN public.tp_batch.access_address IS '接入地址';
+
