@@ -64,6 +64,16 @@
     docker-compose -f docker-compose.yml down
     ```
 
+- ***若出现了EOF连接错误，添加docker下载加速器***
+    ```bash
+    # 使用配置文件 /etc/docker/daemon.json（没有时新建该文件）
+    {
+    "registry-mirrors": ["https://dockerproxy.com"]
+    }
+    # 重启docker
+    sudo systemctl restart docker
+    ```
+
 ## 挂载说明
 
 - **查看挂载的卷(后面./的目录为卷)**
