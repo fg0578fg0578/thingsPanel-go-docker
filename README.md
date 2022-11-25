@@ -5,22 +5,24 @@
 - **windows电脑安装 [Docker Desktop](https://www.docker.com/products/docker-desktop)**
 - **git**
 
-## linux环境准备
+## linux环境准备 (以下Ubuntu 22.04 LTS)
 
 - **安装docker**
 
     ```bash
-    dnf config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
-    dnf install docker-ce docker-ce-cli containerd.io
-    systemctl start docker.service
-    systemctl enable docker.service
+    #dnf config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+    #dnf install docker-ce docker-ce-cli containerd.io
+    #systemctl start docker.service
+    #systemctl enable docker.service
+    sudo apt install docker.io
     ```
 
 - **安装docker-compose**
 
     ```bash
-    curl -L "https://github.com/docker/compose/releases/download/v2.9.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-    chmod +x /usr/local/bin/docker-compose
+    #curl -L "https://github.com/docker/compose/releases/download/v2.9.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+    #chmod +x /usr/local/bin/docker-compose
+    sudo apt  install docker-compose
     ```
 
 - **如没有安装git**
@@ -35,6 +37,18 @@
     # 拉取docker配置
     git clone https://github.com/ThingsPanel/thingsPanel-go-docker.git
     cd thingsPanel-go-docker
+    ```
+- **当前用户加入docker，并设置不用sudo就可运行**
+
+    ```bash
+    # 创建docker组，若已存在则会报错，可跳过
+    sudo groupadd docker
+    # 将当前用户加入组docker
+    sudo gpasswd -a ${USER} docker
+    # 重启docker服务(生产环境请慎用)
+    sudo systemctl restart docker
+    # 添加访问和执行权限
+    sudo chmod a+rw /var/run/docker.sock
     ```
 
 - **运行项目**
